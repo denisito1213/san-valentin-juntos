@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vanessita linda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Neue', cursive;
+        }
+        
+         :root {
+            --loading-width: 160px;
+            --loading-heigth: 23px;
+        }
+        
+        body {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            /* background-color: yellowgreen; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        main {
+            text-align: center;
+            width: 90vw;
+        }
+        
+        .box {
+            display: inline-block;
+            border: solid rgb(0, 0, 0) 4px;
+            width: var(--loading-width);
+            background-color: white;
+        }
+        
+        .loading-box {
+            height: var(--loading-heigth);
+            width: var(--loading-width);
+            background-color: #eb5d53;
+            /* background-color: aliceblue; */
+            /* animation: loading 5s delay iteration-count direction fill-mode;; */
+            animation: loading 5s;
+        }
+        
+        #state-message {
+            font-size: larger;
+            font-weight: bold;
+            color: rgb(109, 109, 109);
+        }
+        
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: var(--loading-width);
+            }
+        }
+        
+        #title,
+        #result {
+            margin-top: 8px;
+            margin-bottom: 10px;
+        }
+        
+        #me {
+            margin-top: 8px;
+            margin-bottom: 14px;
+        }
+        
+        .box {
+            margin-top: 3px;
+        }
+    </style>
+    <link rel="stylesheet" href="estilos.css">
+    
+  
+<body>
+    
+    <video autoplay loop muted> 
+        <source src="video/video.mp4">     
+    </video> 
+    <main>
+    
+     <h1 style="color: rgb(119, 0, 255); "title">En el jardín de mi corazón,
+      Vanessa, florece la flor más hermosa:
+       nuestro amor. Feliz San Valentín, mi amor.</h1>
+        <div>
+            <img id="me" src="penguin.svg" alt="">
+        </div>
+        <div class="box">
+            <div class="loading-box"></div>
+        </div>
+
+        <h3 id="state-message">floreciendo...</h3>
+        <h2 id="result">&nbsp;</h2>
+        <script>
+            setTimeout(function() {
+                const message = document.getElementById('result');
+                message.innerHTML = "amorcito enviado :3"
+            }, 6200);
+            setTimeout(function() {
+                const message = document.getElementById('state-message');
+                message.innerHTML = "&nbsp;"
+            }, 6000);
+        </script>
+      
+</main> 
+<audio autoplay loop>
+    <source src="cancion.mp3" type="audio/mpeg">
+</audio>
+</body>
+
+</html>
